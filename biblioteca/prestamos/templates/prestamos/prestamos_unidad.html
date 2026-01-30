@@ -1,0 +1,9 @@
+<h2>Préstamos de la unidad: {{ unidad }}</h2>
+
+<ul>
+    {% for p in prestamos %}
+        <li>{{ p.usuario }} — {{ p.fecha_prestamo }} {% if p.devuelto %}(devuelto){% endif %}</li>
+    {% empty %}
+        <li>No hay préstamos registrados.</li>
+    {% endfor %}
+</ul>
